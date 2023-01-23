@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "British Translator",
   "version": "0.0.1",
-  "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "manifest_version": 3,
+  "permissions": ["tabs"],
+  "description": "This extension searches through the DOM for words that can be converted to British English slang from American English",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -11,15 +11,17 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": [
-      "src/background.js"
-    ],
-    "persistent": true
+    "service_worker": "background.js"
   },
-  "browser_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
-    "default_popup": "src/browser_action.html"
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "19": "icons/icon19.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "British Translator",
+    "default_popup": "browser_action.html"
   },
   "content_scripts": [
     {
