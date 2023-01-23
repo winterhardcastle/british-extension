@@ -2,7 +2,7 @@
   "name": "British Translator",
   "version": "0.0.1",
   "manifest_version": 3,
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "activeTab"],
   "description": "This extension searches through the DOM for words that can be converted to British English slang from American English",
   "icons": {
     "16": "icons/icon16.png",
@@ -10,26 +10,23 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_icon": {
-      "16": "icons/icon16.png",
-      "19": "icons/icon19.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
+      "16": "icons/UK_flag.png",
+      "19": "icons/UK_flag.png",
+      "48": "icons/UK_flag.png",
+      "128": "icons/UK_flag.png"
     },
     "default_title": "British Translator",
-    "default_popup": "browser_action.html"
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "<all_urls>"
       ],
       "js": [
-        "src/content_script.js"
+        "content_script.js"
       ]
     }
   ]

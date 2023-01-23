@@ -1,4 +1,6 @@
-export const translations = {
+module.exports = translations;
+
+const translations = {
   upset: "gutted",
   happy: "chuffed",
   tired: "knackered",
@@ -33,4 +35,18 @@ export const translations = {
   dessert: "pudding",
   candy: "sweets",
   ordinary: "bog standard",
+  cookie: "biscuit",
+  windshield: "windscreen",
+  booger: "bogey",
+  man: "bloke",
+  awesome: "ace",
+  color: "colour",
+  soccer: "football",
+  math: "maths",
+  bath: "bathtub",
+  uniform: "kit",
+  behavior: "behaviour",
+  meter: "metre",
+  college: "university",
+  cleats: "boots",
 };
